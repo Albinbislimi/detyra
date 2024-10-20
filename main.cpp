@@ -1,28 +1,30 @@
 #include <iostream>
 #include <string>
-#include <ctime>  // Për të marrë vitin aktual
+#include <ctime>
+
+using namespace std;
 
 int main() {
     // Variablat për hyrje
-    std::string emri, mbiemri;
+    string emri, mbiemri;
     int vitiLindjes, gjatesia;  // Gjatesia në cm
     float pesha;  // Pesha në kg
-
+    
     // Hyrja e të dhënave nga përdoruesi
-    std::cout << "Shkruani emrin tuaj: ";
-    std::cin >> emri;
+    cout << "Shkruani emrin tuaj: ";
+    cin >> emri;
 
-    std::cout << "Shkruani mbiemrin tuaj: ";
-    std::cin >> mbiemri;
+    cout << "Shkruani mbiemrin tuaj: ";
+    cin >> mbiemri;
 
-    std::cout << "Shkruani vitin e lindjes: ";
-    std::cin >> vitiLindjes;
+    cout << "Shkruani vitin e lindjes: ";
+    cin >> vitiLindjes;
 
-    std::cout << "Shkruani gjatesine tuaj ne cm: ";
-    std::cin >> gjatesia;
+    cout << "Shkruani gjatesine tuaj ne cm: ";
+    cin >> gjatesia;
 
-    std::cout << "Shkruani peshen tuaj ne kg: ";
-    std::cin >> pesha;
+    cout << "Shkruani peshen tuaj ne kg: ";
+    cin >> pesha;
 
     // Llogaritja e vitit aktual
     time_t t = time(0);
@@ -39,11 +41,11 @@ int main() {
     float BMI = pesha / (gjatesiaNeMetra * gjatesiaNeMetra);
 
     // Shfaqja e rezultatit
-    std::cout << "Miresevini " << mbiemri << " " << emri
-              << ", ju jeni " << mosha << " vite, "
-              << "i gjate " << gjatesia << " cm, "
-              << "peshoni " << pesha << " kg dhe "
-              << "indexi BMI eshte: " << BMI << std::endl;
+    cout << "Miresevini " << mbiemri << " " << emri
+         << ", ju jeni " << mosha << " vite, "
+         << "i gjate " << gjatesia << " cm, "
+         << "peshoni " << pesha << " kg dhe "
+         << "indexi BMI eshte: " << BMI << endl;
 
     return 0;
 }
